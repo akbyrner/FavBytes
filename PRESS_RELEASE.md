@@ -2,7 +2,7 @@
 
 ## FavBytes Revolutionizes How Foodies Remember Their Favorite Meals
 
-**New Orleans, LA** — Today, the developers of **FavBytes** are proud to announce the latest updates to the premier application designed for dining enthusiasts. FavBytes provides a way for users to save, map, and recall their favorite dishes from restaurants around the world.
+**New Orleans, LA** Today, the developers of **FavBytes** are proud to announce the latest updates to the premier application designed for dining enthusiasts. FavBytes provides a way for users to save, map, and recall their favorite dishes from restaurants around the world.
 
 In an age where we are constantly discovering new culinary gems, it's easy to forget that one perfect dish from a weekend getaway or a local hidden spot. FavBytes solves this problem by offering a dedicated space to archive these memories, complete with location mapping and visual galleries.
 
@@ -17,7 +17,7 @@ In an age where we are constantly discovering new culinary gems, it's easy to fo
 
 ### About FavBytes
 
-FavBytes is a full-stack web application. Focused on visual excellence and user-friendly design, it aims to be the go-to companion for everyone from casual diners to professional food critics.
+FavBytes is a full-stack web application focused on visual excellence and user-friendly design, it aims to be the go-to companion for everyone from casual diners to professional food critics.
 
 For more information on FavBytes, visit the official repository at [https://github.com/Stack-mates/FavBytes](https://github.com/Stack-mates/FavBytes) or check out the `CONTRIBUTING.md` to get involved in the project.
 

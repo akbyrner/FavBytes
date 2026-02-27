@@ -32,5 +32,5 @@ https://docs.mapbox.com/ < MapBox docs
 
 ## TEAM
 
-- **Scrum Master:** Bernie
-- **Project Owner:** Hope
+**Scrum Master:** Bernie
+**Project Owner:** Hope
