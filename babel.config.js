@@ -10,5 +10,6 @@ module.exports = {
         // "importSource": "custom-jsx-library" // defaults to react (only in automatic runtime)
       },
     ],
+    ['@babel/preset-env'],
   ],
 };
