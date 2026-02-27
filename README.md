@@ -18,9 +18,6 @@ https://tailwindcss.com/ < tailwind docs
 
 https://daisyuikit.com/docs/components < daisy ui docs
 
-
-
-
 server:
 https://expressjs.com/ < express server
 
@@ -29,11 +26,11 @@ https://www.mongodb.com/ < database
 
 https://mongoosejs.com/ < ORM
 
-
-
-
 Mapbox API docs
-
 https://www.npmjs.com/package/mapbox < MapBox commands
-
 https://docs.mapbox.com/ < MapBox docs
+
+## TEAM
+
+- **Scrum Master:** Bernie
+- **Project Owner:** Hope
