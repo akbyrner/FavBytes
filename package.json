@@ -11,6 +11,7 @@
     "express-session": "^1.19.0",
     "google-auth-library": "^10.6.1",
     "jwt-decode": "^4.0.0",
+    "image-upload-react": "^1.4.5",
     "mapbox": "^1.0.0-beta10",
     "mongoose": "^9.2.3",
     "react": "^19.2.4",
