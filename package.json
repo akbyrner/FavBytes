@@ -1,15 +1,29 @@
 {
   "dependencies": {
+    "@react-oauth/google": "^0.13.4",
     "axios": "^1.13.5",
     "babel": "^5.8.38",
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.6",
     "daisyui": "^5.5.19",
-    "eslint": "^10.0.2",
+    "dotenv": "^17.3.1",
     "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "google-auth-library": "^10.6.1",
+    "jwt-decode": "^4.0.0",
     "mapbox": "^1.0.0-beta10",
     "mongoose": "^9.2.3",
     "react": "^19.2.4",
     "react-router": "^7.13.1",
     "tailwindcss": "^4.2.1",
     "webpack": "^5.105.3"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node server/index.js"
+  },
+  "devDependencies": {
+    "babel-plugin-react-compiler": "^1.0.0",
+    "eslint-plugin-react-hooks": "^7.0.1"
   }
 }
