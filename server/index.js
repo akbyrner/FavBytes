@@ -3,8 +3,8 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const { OAuth2Client } = require('google-auth-library');
-const connectDB = require('./db');
-const User = require('./models/User');
+const connectDB = require('../database/db.js');
+const User = require('../database/models/User.js');
 
 const app = express();
 const port = process.env.PORT || 3001;
