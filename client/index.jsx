@@ -1,10 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+
+import { createRoot } from 'react-dom/client';
 
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import App from './components/App';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const root = createRoot(document.getElementById('root'));
+
+root.render(
   <GoogleOAuthProvider clientId="YOUR_GOOGLE_CLIENT_ID">
     <App />
   </GoogleOAuthProvider>
