@@ -1,15 +1,19 @@
 import React from 'react';
-// import Homepage from './HomePage';
-// import Gallery from './Gallery';
-// import LogIn from './LogIn';
-// import ImagePage from './ImagePage';
+import Homepage from './HomePage';
+import Gallery from './Gallery';
+import LogIn from './LogIn';
+import ImagePage from './ImagePage';
 
 export default function App () {
 
 return (
   <div>
+  <LogIn/>
     <h1>Welcome to FavBytes!</h1>
+  <Homepage/>
+  <Gallery/>
 
+  <ImagePage/>
   </div>
 )
 };
