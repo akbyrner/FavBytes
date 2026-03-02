@@ -1,10 +1,15 @@
 export default function NavBar() {
+
+
   return (
-    <div>
+    <div id="navigation-bar"className="navigation-bar">
       <h1>This is the Navigation Bar!</h1>
       <ul>
         <li>
           <a>Home</a>
+        </li>
+        <li>
+          <a>Image Upload</a>
         </li>
         <li>
           <a>Gallery</a>

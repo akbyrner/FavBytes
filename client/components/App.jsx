@@ -1,32 +1,32 @@
 import React from 'react';
-import Homepage from './HomePage';
-import Gallery from './Gallery';
+import Homepage from './HomePage/HomePage';
+import Gallery from './Gallery/Gallery';
 import LogIn from './LogIn';
-import ImagePage from './ImagePage';
+import ImagePage from './ImagePage/ImagePage';
 import NavBar from './NavigationBar';
+import ImageUpload from './ImageUpload/ImageUpload';
 
 export default function App() {
+
+
   return (
     <div className="app-container">
       <LogIn />
-
       <div className="content-row">
         <div className="sidebar">
           <NavBar />
         </div>
 
         <div className="main-area">
-          <div className="map-section">
-            <Homepage />
-          </div>
+          <Homepage />
+          <ImagePage/>
+          <ImageUpload/>
 
           <div className="gallery-section">
             <Gallery />
           </div>
         </div>
       </div>
-
-      <ImagePage />
     </div>
   );
 }

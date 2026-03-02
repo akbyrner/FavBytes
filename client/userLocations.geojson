@@ -1,0 +1,185 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+            "storeName": "Red Dog Pet Resort & Spa",
+            "phoneFormatted": "(202) 234-7336",
+            "phone": "2022347336",
+            "address": "274 Southampton St",
+            "city": "Boston",
+            "country": "United States",
+            "postalCode": "02118",
+            "state": "MA"
+        },
+        "geometry": {
+          "coordinates": [
+            -71.06395692533867,
+            42.33124307463521
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "storeName": "Pawsh Dog Boutique",
+            "phoneFormatted": "(202) 234-7336",
+            "phone": "2022347336",
+            "address": "31 Gloucester St",
+            "city": "Boston",
+            "country": "United States",
+            "postalCode": "02118",
+            "state": "MA"
+        },
+        "geometry": {
+          "coordinates": [
+            -71.08424331687853,
+            42.34939425832167
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "storeName": "Beantown Bed & Biscuit",
+            "phoneFormatted": "(617) 751-0004",
+            "phone": "6177510004",
+            "address": "310 Harvard St",
+            "city": "Brookline",
+            "country": "United States",
+            "postalCode": "02446",
+            "state": "MA"
+        },
+        "geometry": {
+          "coordinates": [
+            -71.12328686505596,
+            42.34306978533459
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "storeName": "Tails",
+            "phoneFormatted": "(617) 942-7400",
+            "phone": "6179427400",
+            "address": "380 Centre St",
+            "city": "Jamaica Plain",
+            "country": "United States",
+            "postalCode": "02130",
+            "state": "MA"
+        },
+        "geometry": {
+          "coordinates": [
+            -71.10929449735929,
+            42.32196823138287
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "storeName": "Toureen Pet Resort and Spa",
+            "phoneFormatted": "(617) 923-3800",
+            "phone": "6179233800",
+            "address": "380 Pleasant St",
+            "city": "Watertown",
+            "country": "United States",
+            "postalCode": "02472",
+            "state": "MA"
+        },
+        "geometry": {
+          "coordinates": [
+            -71.2017335898921,
+            42.36679195602801
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "storeName": "City Tails",
+            "phoneFormatted": "(617) 838-8245",
+            "phone": "6177838245",
+            "address": "20 Tremont St",
+            "city": "Brighton",
+            "country": "United States",
+            "postalCode": "02135",
+            "state": "MA"
+        },
+        "geometry": {
+          "coordinates": [
+            -71.16879991133189,
+            42.35050170006224
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "storeName": "Boston Dog Butlers",
+            "phoneFormatted": "(617) 712-2082",
+            "phone": "6177122082",
+            "address": "398 Columbus Avenue",
+            "city": "Boston",
+            "country": "United States",
+            "postalCode": "02116",
+            "state": "MA"
+        },
+        "geometry": {
+          "coordinates": [
+            -71.07638791201538,
+            42.34453069902233
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "storeName": "Petiquette Boutique and Spa",
+            "phoneFormatted": "(857) 305-3925",
+            "phone": "8573053925",
+            "address": "501 Congress Street",
+            "city": "Boston",
+            "country": "United States",
+            "postalCode": "02116",
+            "state": "MA"
+        },
+        "geometry": {
+          "coordinates": [
+            -71.04208508659292,
+            42.34844996347468
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "storeName": "Dewberry Dogs Spa",
+            "phoneFormatted": "(617) 269-1507",
+            "phone": "6172691507",
+            "address": "357 W Broadway",
+            "city": "South Boston",
+            "country": "United States",
+            "postalCode": "02127",
+            "state": "MA"
+        },
+        "geometry": {
+          "coordinates": [
+            -71.04977908722788,
+            42.337853090261945
+          ],
+          "type": "Point"
+        }
+      }
+    ]
+  }
