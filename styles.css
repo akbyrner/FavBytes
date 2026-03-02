@@ -59,6 +59,9 @@
 }
 .gallery-section {
   height: 200px;
+  position: absolute;
+  width: 100%;
+  top: 75%;
   background-color: olive;
   overflow-y: auto;
 }
