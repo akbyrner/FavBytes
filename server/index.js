@@ -5,23 +5,30 @@ const bodyParser = require('body-parser');
 const { OAuth2Client } = require('google-auth-library');
 const connectDB = require('../database/db.js');
 const User = require('../database/models/User.js');
+const Dish = require('../database/models/Dish.js');
 
 const app = express();
 const port = process.env.PORT || 3001;
 
-// Connect to Database
 connectDB();
 
-// Initialize Google OAuth2 Client
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
-// Middleware
 app.use(cors());
 app.use(bodyParser.json());
 
-// Routes
 app.get('/', (req, res) => {
   res.send('FavBytes API is running...');
+});
+
+app.get('/api/dishes', async (req, res) => {
+  try {
+    const dishes = await Dish.find().populate('userId', 'name');
+    res.status(200).json(dishes);
+  } catch (error) {
+    console.error('Error fetching dishes:', error);
+    res.status(500).json({ message: 'Error fetching dishes', error: error.message });
+  }
 });
 
 app.post('/auth/google', async (req, res) => {
@@ -32,13 +39,12 @@ app.post('/auth/google', async (req, res) => {
       idToken: token,
       audience: process.env.GOOGLE_CLIENT_ID,
     });
-    
+
     const payload = ticket.getPayload();
-    
-    // Find or create the user in the database
+
     const user = await User.findOneAndUpdate(
       { googleId: payload.sub },
-      { 
+      {
         email: payload.email,
         name: payload.name,
         picture: payload.picture
@@ -59,7 +65,7 @@ app.post('/auth/google', async (req, res) => {
   }
 });
 
-// Start Server
+
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
 });

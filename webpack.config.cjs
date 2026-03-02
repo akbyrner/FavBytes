@@ -1,4 +1,6 @@
+require('dotenv').config();
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -50,6 +52,9 @@ module.exports = {
       template: './client/index.html',
 
       inject: 'body',
+    }),
+    new webpack.DefinePlugin({
+      'process.env.MAPBOX_TOKEN': JSON.stringify(process.env.MAPBOX_TOKEN || ''),
     }),
   ],
 };
