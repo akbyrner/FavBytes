@@ -25,7 +25,7 @@
 
 .sidebar {
   width: 250px;
-background-color: indianred;
+  background-color: indianred;
   flex-shrink: 0;
 }
 
@@ -35,11 +35,28 @@ background-color: indianred;
   flex-direction: column;
 }
 
-.map-section {
+.map {
   flex: 1;
-  min-height: 400px;
+  width: 50%;
+  position: absolute;
+  min-height: 75%;
+}
+.map-overlay {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 230px;
+  padding: 10px;
+  color: #1a2224;
+  font: 12px/20px sans-serif;
+  display: none;
 }
 
+.map-overlay-inner {
+  background: #fff;
+  padding: 10px;
+  border-radius: 3px;
+}
 .gallery-section {
   height: 200px;
   background-color: olive;

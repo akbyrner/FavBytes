@@ -16,7 +16,7 @@ export default function App() {
         </div>
 
         <div className="main-area">
-          <div className="map-section">
+          <div className="map">
             <Homepage />
           </div>
 

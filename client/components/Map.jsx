@@ -1,8 +1,10 @@
-export default function map () {
+export default function Map () {
 
 return (
   <div>
     <h1>This is the Map Element!</h1>
+<div id="map"></div>
+<div class="map-overlay" id="properties"></div>
 
   </div>
 )
