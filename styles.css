@@ -62,8 +62,7 @@
 
 .sidebar {
   width: 15%;
-  height:75%;
-  top:auto;
+  height: 100%;
   background-color: #fff7d9;
   flex-shrink: 0;
 }
@@ -77,6 +76,7 @@
   position: relative;
   flex-direction: column;
 }
+
 .homePage {
   background-color: #abb95b;
   flex: 1;
@@ -84,12 +84,13 @@
   justify-content: right;
   position: relative;
   height: 95%;
-    width: 100%;
+  width: 100%;
 }
+
 .map {
   flex: 1;
   display: flex;
-  max-width:90%;
+  max-width: 90%;
   max-height: 75%;
   padding: 25px;
   background-color: #abb95b;
@@ -97,13 +98,59 @@
 }
 
 
+
 .current-image {
   background-color: #a92d63;
   flex: 1;
   display: flex;
+  max-height: 75%;
   position: relative;
-  max-height: 5%;
+  flex-direction:column ;
 }
+
+.current-image-show-here {
+  max-width: 80%;
+  border-radius: 12px;
+  max-height: 80%;
+  background-color: #0a1684;
+  padding: 20%;
+}
+
+.current-image-title {
+  size: 95%;
+  height: auto;
+  background-color: #a0a5d2;
+  padding: 5px;
+}
+
+.current-image-description {
+  size: 95%;
+  background-color: #8a581c;
+  padding: 5px;
+}
+
+.current-image-location {
+  size: 95%;
+  background-color: #45902e;
+  padding: 5px;
+}
+
+.current-image-tags {
+  size: 95%;
+  background-color: #902e4b;
+  padding: 5px;
+}
+.current-image-tag-list {
+  size: 95%;
+  background-color: #a4360eb0;
+  padding: 5px;
+}
+
+
+
+
+
+
 .image-upload {
   background-color: #2e3890;
   flex: 1;
@@ -112,12 +159,9 @@
   max-height: 5%;
 }
 
-
-
-
 .gallery-section {
   height: 25%;
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 75%;
   background-color: #ffc559;
