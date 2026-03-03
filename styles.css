@@ -75,27 +75,29 @@
   flex-shrink: 0;
   position: relative;
   flex-direction: column;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .homePage {
   background-color: #abb95b;
   flex: 1;
   display: flex;
-  justify-content: right;
+  justify-content: center;
   position: relative;
-  height: 5%;
   width: 100%;
 }
 
 .map {
   flex: 1;
-  max-width: 90%;
-  max-height: 90%;
-  padding: 25px;
+  max-width: 95%;
+  top:0%;
+  bottom:auto;
+  padding: 5%;
   background-color: #abb95b;
   position: relative;
 }
+
+
 
 .current-image {
   background-color: #a92d63;
@@ -104,12 +106,10 @@
   gap: 25px;
   padding: 25px;
 }
-
 .current-image-box1 {
   flex-direction: column;
   flex: 3 0 0;
 }
-
 .current-image-show-here {
   border-radius: 12px;
   max-height: 95%;
@@ -117,7 +117,6 @@
   padding: 25px;
   width: 100;
 }
-
 .cur-img {
   border-radius: 12px;
   max-height: 95%;
@@ -135,7 +134,6 @@
 .current-image-box2 {
   flex: 1 0 0;
 }
-
 .current-image-description {
   size: 95%;
   border-radius: 12px;
@@ -158,7 +156,6 @@
   height: 95%;
   border-radius: 12px;
 }
-
 .current-image-tag-list {
   height: 95%;
   background-color: #a4360eb0;
@@ -168,10 +165,66 @@
 
 .image-upload {
   background-color: #2e3890;
-  flex: 1;
   display: flex;
-  position: relative;
-  max-height: 5%;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 25px;
+}
+.image-upload-box1 {
+  flex-direction: column;
+  flex: 3 0 0;
+}
+.image-upload-show-here {
+  border-radius: 12px;
+  max-height: 95%;
+  background-color: #b8bce7;
+  padding: 25px;
+  width: 100;
+}
+.upload-img {
+  border-radius: 12px;
+  max-height: 95%;
+  background-color: #0c133c;
+  padding: 30%;
+  width: 100;
+}
+.image-upload-title {
+  size: 95%;
+  border-radius: 12px;
+  height: auto;
+  padding: 25px;
+  background-color: #a0a5d2;
+}
+.image-upload-box2 {
+  flex: 1 0 0;
+}
+.image-upload-description {
+  size: 95%;
+  border-radius: 12px;
+  height: auto;
+  padding: 25px;
+  background-color: #a0a5d2;
+}
+
+.image-upload-location {
+  size: 95%;
+  border-radius: 12px;
+  height: auto;
+  padding: 25px;
+  background-color: #a0a5d2;
+}
+
+.image-upload-tags {
+  background-color: #902e4b;
+  padding: 25px;
+  height: 95%;
+  border-radius: 12px;
+}
+.image-upload-tag-list {
+  height: 95%;
+  background-color: #a4360eb0;
+  padding: 5px;
+  border-radius: 12px;
 }
 
 .gallery-section {

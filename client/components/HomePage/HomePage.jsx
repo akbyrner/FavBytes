@@ -4,8 +4,7 @@ export default function HomePage() {
   
   return (
     <div id="homePage" className="homePage">
-      <h1>This is the Homepage!</h1>
-      <div className="map">
+      <div id="map" className="map">
         <Map />
       </div>
     </div>

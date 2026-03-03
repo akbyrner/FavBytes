@@ -3,14 +3,11 @@ import ImageTags from './ImageTags';
 export default function ImagePage() {
   return (
     <div id="current-image" className="current-image">
-
-
-      <div id="current-image-box1"className="current-image-box1">
-
+      <div id="current-image-box1" className="current-image-box1">
         <div id="current-image-show-here" className="current-image-show-here">
           <h2> current image show here</h2>
 
-          <div id="cur-img"className="cur-img"></div>
+          <div id="cur-img" className="cur-img"></div>
         </div>
 
         <div id="current-image-title" className="current-image-title">
@@ -18,10 +15,7 @@ export default function ImagePage() {
         </div>
       </div>
 
-
-
-
-      <div id="current-image-box2"className="current-image-box2">
+      <div id="current-image-box2" className="current-image-box2">
         <div
           id="current-image-description"
           className="current-image-description"
@@ -31,14 +25,10 @@ export default function ImagePage() {
         <div id="current-image-location" className="current-image-location">
           <h3> current image location here</h3>
         </div>
-        <div id="current-image-tags"className="current-image-tags">
+        <div id="current-image-tags" className="current-image-tags">
           <ImageTags />
         </div>
-
       </div>
-
-
-
     </div>
   );
 }

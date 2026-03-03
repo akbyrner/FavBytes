@@ -14,7 +14,7 @@ export default function AppMap() {
   }, []);
 
   return (
-    <div style={{ height: '500px', width: '100%', borderRadius: '12px', overflow: 'hidden' }}>
+    <div style={{ height: '100%', width: '100%', borderRadius: '12px', overflow: 'hidden' }}>
       <Map
         initialViewState={{
           longitude: -74.006,
