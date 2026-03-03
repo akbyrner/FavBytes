@@ -1,18 +1,35 @@
-import GalleryItem from "./GalleryItem";
-import Swiper from "swiper";
-import 'swiper/css/bundle';
+import { React, useState } from 'react';
+import GalleryItem from './GalleryItem';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-const swiper = new Swiper();
-
-export default function Gallery () {
-
-
-return (
-  <div id="gallery">
-    <h1>This is the Gallery!</h1>
-     <GalleryItem />
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 
-  </div>
-)
-};
+
+
+export default function Gallery({searchArr, setSearchArr}) {
+  return (
+    <Swiper
+      // install Swiper modules
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      spaceBetween={50}
+      slidesPerView={3}
+      navigation
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
+    >
+      <SwiperSlide>Slide 1</SwiperSlide>
+      <SwiperSlide>Slide 2</SwiperSlide>
+      <SwiperSlide>Slide 3</SwiperSlide>
+      <SwiperSlide>Slide 4</SwiperSlide>
+      ...
+    </Swiper>
+  );
+}

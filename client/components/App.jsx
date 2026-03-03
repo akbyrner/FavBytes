@@ -22,6 +22,7 @@ export default function App() {
   const [isShowingSidebar, setIsShowingSidebar] = useState(false);
   const [view, setView] = useState('HomePage');
   const [isActive, setIsActive] = useState(false);
+  const [searchArr, setSearchArr] = useState(['img1', 'img2', 'img3', 'img4']);
 
   return (
     <div id="app-container" className="app-container">
@@ -36,13 +37,17 @@ export default function App() {
             </button>
 
             <div id="main-view" className="main-view">
-              <MainView view={view} isActive={isActive} setIsActive={setIsActive} />
+              <MainView
+                view={view}
+                isActive={isActive}
+                setIsActive={setIsActive}
+              />
             </div>
           </div>
         </>
       </div>
       <div id="gallery-section" className="gallery-section">
-        <Gallery />
+        <Gallery searchArr={searchArr} setSearchArr={setSearchArr}/>
       </div>
     </div>
   );

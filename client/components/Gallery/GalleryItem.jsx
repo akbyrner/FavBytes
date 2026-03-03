@@ -1,5 +1,6 @@
-export default function GalleryItem() {
 
+
+export default function GalleryItem({title, thumbnail, item}) {
   
   return (
     <div id="gallery-item" className="gallery-item">

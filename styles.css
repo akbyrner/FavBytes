@@ -52,6 +52,10 @@
   background-color: #e7efc7;
   overflow-y: auto;
 }
+.swiper {
+  width: 70%;
+  height: 95%;
+}
 
 .main-area {
   flex: 1;
