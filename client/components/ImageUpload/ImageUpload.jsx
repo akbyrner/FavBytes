@@ -1,6 +1,8 @@
 import ImageUploadTags from './ImageUploadTags';
+import { useState } from 'react';
 
 export default function ImageUpload() {
+  const [isActive, setIsActive] = useState(false);
   return (
     <div id="image-upload" className="image-upload">
       <div id="image-upload-box1" className="image-upload-box1">

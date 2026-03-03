@@ -60,6 +60,11 @@
   display: flex;
 }
 
+.button {
+  background-color: #902e4b;
+  border-color: brown;
+}
+
 .sidebar {
   width: 15%;
   height: 100%;
@@ -72,10 +77,19 @@
   display: flex;
   background-color: #829461;
   width: 85%;
+  height: 95%;
   flex-shrink: 0;
   position: relative;
   flex-direction: column;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.main-view {
+  flex: 1;
+  display: flex;
+  size: 97%;
+  flex-shrink: 0;
+  position: relative;
+  flex-direction: column;
 }
 
 .homePage {
@@ -90,14 +104,12 @@
 .map {
   flex: 1;
   max-width: 95%;
-  top:0%;
-  bottom:auto;
+  top: 0%;
+  bottom: auto;
   padding: 5%;
   background-color: #abb95b;
   position: relative;
 }
-
-
 
 .current-image {
   background-color: #a92d63;
@@ -105,6 +117,8 @@
   justify-content: space-between;
   gap: 25px;
   padding: 25px;
+  position: relative;
+  width: 100%;
 }
 .current-image-box1 {
   flex-direction: column;
@@ -169,6 +183,8 @@
   justify-content: space-between;
   gap: 25px;
   padding: 25px;
+  position: relative;
+  width: 100%;
 }
 .image-upload-box1 {
   flex-direction: column;

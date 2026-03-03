@@ -1,6 +1,8 @@
 import ImageTags from './ImageTags';
+import { useState } from 'react';
 
 export default function ImagePage() {
+  const [isActive, setIsActive] = useState(false);
   return (
     <div id="current-image" className="current-image">
       <div id="current-image-box1" className="current-image-box1">

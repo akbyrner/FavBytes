@@ -19,13 +19,14 @@ import ImageUpload from './ImageUpload/ImageUpload';
 // }
 //          <div id= 'main-view'className='main-view'>{changeView(view)}"new view"</div>
 
-function mainView({ view }) {
-  return view ? <h2>view</h2> : 'no view';
+function mainView() {
+  const view = useState({view})
+  return <div> view ? <h2>view</h2> : 'no view'</div>
 }
 
 export default function App() {
   const [isShowingSidebar, setIsShowingSidebar] = useState(true);
-  const [view, setState] = useState('');
+  const [view, setView] = useState('HomePage');
   return (
     <div id="app-container" className="app-container">
       <LogIn />
@@ -38,8 +39,8 @@ export default function App() {
               Toggle Sidebar Here
             </button>
             <div>
-              <div>{view}
-                <mainView useState={view} />
+              <div>
+                {view}
               </div>
               <HomePage />
               <ImageUpload />
