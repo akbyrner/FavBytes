@@ -51,6 +51,7 @@
   width: 100%;
   top: 70%;
   display: flex;
+  flex: 0;
   justify-content: center;
   background-color: #427a76;
   overflow-y: auto;
@@ -60,6 +61,7 @@
   display: flex;
   height: 90%;
   width: 90%;
+  flex: 1;
   justify-content: space-around;
   padding: 25px;
   background-color: #30364f;
@@ -68,6 +70,7 @@
 }
 .gallery-thumbnail {
   display: flex;
+  flex: 1;
   background-color: #f2aebb;
   height: 90%;
   width: 90%;
@@ -75,6 +78,8 @@
 }
 .swiper {
   display: flex;
+  flex: 1;
+
   width: 95%;
   height: 95%;
 }
@@ -82,12 +87,12 @@
   display: flex;
   width: 70%;
   height: 95%;
-
   text-align: center;
 }
 
 .swiper-slide {
   display: flex;
+  flex:1;
   background-color: rgb(4 47 46);
   color: #829461;
   width: 100%;
