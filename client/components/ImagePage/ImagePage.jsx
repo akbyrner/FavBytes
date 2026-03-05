@@ -1,7 +1,9 @@
+import { React, useState } from 'react';
 import ImageTags from './ImageTags';
+import Gallery from '../Gallery/Gallery';
 
 export default function ImagePage({ isActive = true, setIsActive }) {
-
+  const [searchArr, setSearchArr] = useState(['img1', 'img2', 'img3', 'img4']);
   //console.log(!isActive ? 'ImagePage is active' : 'ImagePage isnot active');
   return (
     <div id="current-image" className="current-image">
@@ -29,6 +31,9 @@ export default function ImagePage({ isActive = true, setIsActive }) {
         <div id="current-image-tags" className="current-image-tags">
           <ImageTags />
         </div>
+      </div>
+      <div id="gallery-section" className="gallery-section">
+        <Gallery searchArr={searchArr} setSearchArr={setSearchArr} />
       </div>
     </div>
   );

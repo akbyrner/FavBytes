@@ -43,6 +43,7 @@
   width: 15%;
   height: 100%;
   background-color: #acbac4;
+  display: flex;
   flex-shrink: 0;
 }
 .gallery-section {
@@ -50,8 +51,8 @@
   position: fixed;
   width: 100%;
   top: 70%;
+  bottom: 0%;
   display: flex;
-  flex: 0;
   justify-content: center;
   background-color: #427a76;
   overflow-y: auto;
@@ -92,7 +93,7 @@
 
 .swiper-slide {
   display: flex;
-  flex:1;
+  flex: 1;
   background-color: rgb(4 47 46);
   color: #829461;
   width: 100%;
@@ -140,7 +141,6 @@
   background-color: #abb95b;
   flex: 1;
   display: flex;
-  padding: 25px;
   justify-content: right;
   position: relative;
   width: 100%;
@@ -151,19 +151,16 @@
   border-radius: 12px;
   max-width: 70%;
   max-height: 95%;
-
   background-color: #abb95b;
   position: relative;
 }
 
 .current-image {
+  background-color: #abb95b;
+  flex: 1;
   display: flex;
-  justify-content: space-between;
-  gap: 25px;
-  padding: 25px;
+  justify-content: right;
   position: relative;
-  bottom: 0%;
-  height: 100%;
   width: 100%;
 }
 .current-image-box1 {
