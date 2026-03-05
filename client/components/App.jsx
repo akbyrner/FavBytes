@@ -19,6 +19,7 @@ function MainView({ view, isActive, setIsActive, user }) {
 export default function App() {
   const [user, setUser] = useState(null);
   const [isShowingSidebar, setIsShowingSidebar] = useState(false);
+  const [isShowingGallery, setIsShowingGallery] = useState(false);
   const [view, setView] = useState('HomePage');
   const [isActive, setIsActive] = useState(false);
   const [searchArr, setSearchArr] = useState(['img1', 'img2', 'img3', 'img4']);
@@ -33,6 +34,10 @@ export default function App() {
 
   const handleToggleSidebar = () => {
     setIsShowingSidebar(!isShowingSidebar);
+  };
+
+  const handleToggleGallery = () => {
+    setIsShowingGallery(!isShowingGallery);
   };
 
   return (
@@ -57,7 +62,14 @@ export default function App() {
 
           <div id="content-row" className="content-row">
             <>
-              {isShowingSidebar && <NavBar setView={setView} view={view} />}
+              {isShowingSidebar && (
+                <NavBar 
+                  setView={setView} 
+                  view={view} 
+                  isShowingGallery={isShowingGallery} 
+                  onToggleGallery={handleToggleGallery} 
+                />
+              )}
               <div id="main-area" className="main-area">
                 <button onClick={handleToggleSidebar}>
                   Toggle Sidebar Here
@@ -74,9 +86,11 @@ export default function App() {
               </div>
             </>
           </div>
-          <div id="gallery-section" className="gallery-section">
-            <Gallery searchArr={searchArr} setSearchArr={setSearchArr} />
-          </div>
+          {isShowingGallery && (
+            <div id="gallery-section" className="gallery-section">
+              <Gallery searchArr={searchArr} setSearchArr={setSearchArr} />
+            </div>
+          )}
         </>
       )}
     </div>
