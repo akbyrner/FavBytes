@@ -32,6 +32,7 @@
   display: flex;
   background-color: #9c5273;
   flex-direction: column;
+
 }
 
 .content-row {
@@ -39,6 +40,13 @@
   background-color: #5459ac;
   display: flex;
 }
+
+.user-header{
+  top: 0%;
+  font-size: large;
+  justify-content: center;
+}
+
 .sidebar {
   width: 15%;
   height: 100%;

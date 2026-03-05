@@ -2,9 +2,9 @@ import {React, useState} from 'react';
 import Map from './Map';
 import Gallery from '../Gallery/Gallery';
 
-export default function HomePage({ isActive = true, setIsActive }) {
-  const [searchArr, setSearchArr] = useState([]);
+
 export default function HomePage({ isActive = true, setIsActive, user }) {
+    const [searchArr, setSearchArr] = useState([]);
   return (
     <div id="homePage" className="homePage">
       <div id="map" className="map">

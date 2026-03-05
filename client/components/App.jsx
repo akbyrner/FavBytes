@@ -6,13 +6,13 @@ import ImagePage from './ImagePage/ImagePage';
 import NavBar from './NavigationBar';
 import ImageUpload from './ImageUpload/ImageUpload';
 
-function MainView({ view, isActive, setIsActive, user }) {
+function MainView({ view, isActive, setIsActive }) {
   return view === 'ImageUpload' ? (
     <ImageUpload isActive={isActive} setIsActive={setIsActive} />
   ) : view === 'ImagePage' ? (
     <ImagePage isActive={isActive} setIsActive={setIsActive} />
   ) : (
-    <HomePage user={user} />
+    <HomePage />
   );
 }
 
@@ -32,10 +32,6 @@ export default function App() {
     setUser(null);
   };
 
-  const handleToggleSidebar = () => {
-    setIsShowingSidebar(!isShowingSidebar);
-  };
-
   return (
     <div id="app-container" className="app-container">
       {!user ? (
@@ -51,7 +47,7 @@ export default function App() {
               padding: '8px 16px',
             }}
           >
-            <span>FaveBytes! save your favorites.</span>
+            <span style={{ marginRight: 'auto' }} >FaveBytes! save your favorites.</span>
             {user.picture && (
               <img
                 src={user.picture}
@@ -59,7 +55,7 @@ export default function App() {
                 style={{ width: 32, height: 32, borderRadius: '50%' }}
               />
             )}
-            <span>Welcome, {user.name}! FaveBytes! save your favorites.</span>
+            <span>Welcome, {user.name}!</span>
             <button onClick={handleLogout} style={{ marginLeft: 'auto' }}>
               Log out
             </button>
@@ -69,7 +65,7 @@ export default function App() {
             <>
               {isShowingSidebar && <NavBar setView={setView} view={view} />}
               <div id="main-area" className="main-area">
-                <button onClick={handleToggleSidebar}>
+                <button onClick={() => setIsShowingSidebar(!isShowingSidebar)}>
                   Toggle Sidebar Here
                 </button>
 
@@ -78,7 +74,6 @@ export default function App() {
                     view={view}
                     isActive={isActive}
                     setIsActive={setIsActive}
-                    user={user}
                   />
                 </div>
               </div>
