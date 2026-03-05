@@ -33,7 +33,7 @@ app.get('/api/dishes', async (req, res) => {
 });
 
 app.post('/auth/google', async (req, res) => {
-  const { token } = req.body;
+  const { token, location } = req.body;
 
   try {
     const ticket = await client.verifyIdToken({
@@ -43,13 +43,19 @@ app.post('/auth/google', async (req, res) => {
 
     const payload = ticket.getPayload();
 
+    const updateData = {
+      email: payload.email,
+      name: payload.name,
+      picture: payload.picture
+    };
+
+    if (location) {
+      updateData.location = { coordinates: location };
+    }
+
     const user = await User.findOneAndUpdate(
       { googleId: payload.sub },
-      {
-        email: payload.email,
-        name: payload.name,
-        picture: payload.picture
-      },
+      updateData,
       { upsert: true, new: true }
     );
 

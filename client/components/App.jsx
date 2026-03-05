@@ -6,13 +6,13 @@ import ImagePage from './ImagePage/ImagePage';
 import NavBar from './NavigationBar';
 import ImageUpload from './ImageUpload/ImageUpload';
 
-function MainView({ view, isActive, setIsActive }) {
+function MainView({ view, isActive, setIsActive, user }) {
   return view === 'ImageUpload' ? (
     <ImageUpload isActive={isActive} setIsActive={setIsActive} />
   ) : view === 'ImagePage' ? (
     <ImagePage isActive={isActive} setIsActive={setIsActive} />
   ) : (
-    <HomePage />
+    <HomePage user={user} />
   );
 }
 
@@ -29,6 +29,10 @@ export default function App() {
 
   const handleLogout = () => {
     setUser(null);
+  };
+
+  const handleToggleSidebar = () => {
+    setIsShowingSidebar(!isShowingSidebar);
   };
 
   return (
@@ -55,7 +59,7 @@ export default function App() {
             <>
               {isShowingSidebar && <NavBar setView={setView} view={view} />}
               <div id="main-area" className="main-area">
-                <button onClick={() => setIsShowingSidebar(!isShowingSidebar)}>
+                <button onClick={handleToggleSidebar}>
                   Toggle Sidebar Here
                 </button>
 
@@ -64,6 +68,7 @@ export default function App() {
                     view={view}
                     isActive={isActive}
                     setIsActive={setIsActive}
+                    user={user}
                   />
                 </div>
               </div>

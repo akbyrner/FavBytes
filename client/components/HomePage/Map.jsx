@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Map, { Marker, Popup } from 'react-map-gl/mapbox';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-export default function AppMap() {
+export default function AppMap({ user }) {
   const [dishes, setDishes] = useState([]);
   const [selectedDish, setSelectedDish] = useState(null);
 
@@ -13,14 +13,16 @@ export default function AppMap() {
       .catch(err => console.error(err));
   }, []);
 
+  const initialViewState = {
+    longitude: user?.location?.coordinates?.lng ?? -74.006,
+    latitude: user?.location?.coordinates?.lat ?? 40.7128,
+    zoom: 11
+  };
+
   return (
     <div style={{ height: '100%', width: '100%', borderRadius: '12px', overflow: 'hidden' }}>
       <Map
-        initialViewState={{
-          longitude: -74.006,
-          latitude: 40.7128,
-          zoom: 11
-        }}
+        initialViewState={initialViewState}
         mapStyle="mapbox://styles/mapbox/streets-v12"
         mapboxAccessToken={MAPBOX_TOKEN}
       >
