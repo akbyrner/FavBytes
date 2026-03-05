@@ -22,7 +22,7 @@ export default function AppMap() {
           zoom: 11
         }}
         mapStyle="mapbox://styles/mapbox/streets-v12"
-        mapboxAccessToken={process.env.MAPBOX_TOKEN}
+        mapboxAccessToken={MAPBOX_TOKEN}
       >
         {dishes.map(dish => (
           dish.location && dish.location.coordinates ? (

@@ -9,7 +9,7 @@ import App from './components/App';
 const root = createRoot(document.getElementById('root'));
 
 root.render(
-  <GoogleOAuthProvider clientId="YOUR_GOOGLE_CLIENT_ID">
+  <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
     <App />
   </GoogleOAuthProvider>
 );

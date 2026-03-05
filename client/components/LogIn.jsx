@@ -1,12 +1,27 @@
 import React from 'react';
 import { GoogleLogin } from '@react-oauth/google';
-import { jwtDecode } from 'jwt-decode';
-export default function LogIn() {
-  const handleSuccess = (credentialResponse) => {
-    const decoded = jwtDecode(credentialResponse.credential);
-    console.log('User signed in:', decoded);
-    // Send decoded user info or token to your backend here
+
+export default function LogIn({ onLoginSuccess }) {
+  const handleSuccess = async (credentialResponse) => {
+    try {
+      const res = await fetch('/auth/google', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ token: credentialResponse.credential }),
+      });
+
+      if (!res.ok) {
+        throw new Error('Authentication failed');
+      }
+
+      const data = await res.json();
+      console.log('Authenticated user:', data.user);
+      onLoginSuccess(data.user);
+    } catch (err) {
+      console.error('Login error:', err);
+    }
   };
+
   return (
     <div className="login-container">
       <h2>Log in to FavBytes</h2>
