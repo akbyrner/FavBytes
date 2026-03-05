@@ -1,6 +1,6 @@
 module.exports = {
   presets: [
-    ['@babel/preset-react', { runtime: 'automatic' }], // Enable new JSX transform
+    ['@babel/preset-react', { runtime: 'automatic' }],
     ['@babel/preset-env', { targets: 'defaults' }],
   ],
 };
