@@ -17,6 +17,7 @@ function MainView({ view, isActive, setIsActive }) {
 }
 
 export default function App() {
+  const [searchArr, setSearchArr] = useState([]);
   const [user, setUser] = useState(null);
   const [isShowingSidebar, setIsShowingSidebar] = useState(false);
   const [view, setView] = useState('HomePage');
