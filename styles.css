@@ -61,6 +61,7 @@
   top: 70%;
   bottom: 0%;
   display: flex;
+  flex-shrink: 0;
   justify-content: center;
   background-color: #427a76;
   overflow-y: auto;

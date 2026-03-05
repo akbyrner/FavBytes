@@ -1,5 +1,6 @@
 import React from 'react';
 import { GoogleLogin } from '@react-oauth/google';
+import logo from '../../public/images/FavBytes.png';
 
 export default function LogIn({ onLoginSuccess }) {
   const handleSuccess = async (credentialResponse) => {
@@ -47,6 +48,8 @@ export default function LogIn({ onLoginSuccess }) {
         onSuccess={handleSuccess}
         onError={() => console.log('Login Failed')}
       />
+      <div><img className='Logo' src={logo}/>
+      </div>
     </div>
   );
 }
