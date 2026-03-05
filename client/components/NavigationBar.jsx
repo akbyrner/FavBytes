@@ -4,8 +4,7 @@ export default function NavBar({ view, setView, isShowingGallery, onToggleGaller
     <div id="sidebar" className="sidebar">
       <div id="navigation-bar" className="navigation-bar">
         <nav>
-          <ul>
-            <li>
+              {/* HomePage button */}
               <button
                 onClick={() => {
                   setView('HomePage');
@@ -13,8 +12,7 @@ export default function NavBar({ view, setView, isShowingGallery, onToggleGaller
               >
                 {'Go to Home'}
               </button>
-            </li>
-            <li>
+              {/* ImageUpload Button */}
               <button
                 onClick={() => {
                   setView('ImageUpload');
@@ -22,8 +20,7 @@ export default function NavBar({ view, setView, isShowingGallery, onToggleGaller
               >
                 {'Go to Upload'}
               </button>
-            </li>
-            <li>
+              {/* ImagePage button */}
               <button
                 onClick={() => {
                   setView('ImagePage');
@@ -31,14 +28,12 @@ export default function NavBar({ view, setView, isShowingGallery, onToggleGaller
               >
                 {'Go to Image'}
               </button>
-            </li>
-            <li>
+              {/* Gallery show/hide button */}
               <button onClick={onToggleGallery}>
                 {isShowingGallery ? 'Hide Gallery' : 'Show Gallery'}
               </button>
-            </li>
-            <li>{view}</li>
-          </ul>
+            {/* Page view */}
+            {view}          
         </nav>
       </div>
     </div>
