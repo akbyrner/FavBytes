@@ -24,6 +24,7 @@ export default function App() {
   const [isShowingGallery, setIsShowingGallery] = useState(false);
   const [view, setView] = useState('HomePage');
   const [isActive, setIsActive] = useState(false);
+  const [formArr, setFormArr] = useState([]);
 
   useEffect(() => {
     const checkAuth = async () => {
@@ -109,7 +110,7 @@ export default function App() {
                     </button>
                     <button onClick={handleToggleGallery}>
                       {isShowingGallery ? 'Hide Gallery' : 'Show Gallery'}
-                    </button>
+                    </button><div>{formArr}</div>
                   </div>
 
                   <div id="main-view" className="main-view">
@@ -117,7 +118,7 @@ export default function App() {
                       view={view}
                       isActive={isActive}
                       setIsActive={setIsActive}
-                    />
+                    /> 
                   </div>
                 </div>
               </>

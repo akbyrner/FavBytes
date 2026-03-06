@@ -3,6 +3,7 @@ export default function NavBar({
   setView,
   isShowingGallery,
   onToggleGallery,
+
 }) {
   return (
     <div id="sidebar" className="sidebar">
