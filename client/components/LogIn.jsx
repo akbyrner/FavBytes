@@ -15,6 +15,7 @@ export default function LogIn({ onLoginSuccess }) {
             lat: position.coords.latitude,
             lng: position.coords.longitude,
           };
+          console.log(location);
         } catch (err) {
           console.warn('Geolocation permission denied or error:', err);
         }

@@ -20,7 +20,7 @@ export default function App() {
   const [searchArr, setSearchArr] = useState([]);
   const [user, setUser] = useState(null);
   const [isShowingSidebar, setIsShowingSidebar] = useState(false);
-  const [isShowingGallery, setIsShowingGallery] = useState(false);
+  const [isShowingGallery, setIsShowingGallery] = useState(true);
   const [view, setView] = useState('HomePage');
   const [isActive, setIsActive] = useState(false);
 
@@ -36,6 +36,7 @@ export default function App() {
   }, []);
 
   const handleLoginSuccess = (userData) => {
+    console.log(userData)
     setUser(userData);
   };
 

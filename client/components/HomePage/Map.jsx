@@ -19,6 +19,7 @@ export default function AppMap({ user }) {
     zoom: 11
   };
 
+  console.log(initialViewState)
   return (
     <div style={{ height: '100%', width: '100%', borderRadius: '12px', overflow: 'hidden' }}>
       <Map
