@@ -31,22 +31,71 @@
   height: 100vh;
   display: flex;
   background-color: #9c5273;
-  flex-direction: column;
+}
 
+.user-header-before-login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: xx-large;
+}
+.login-container {
+  display: flex;
+  size: 70%;
+  flex-direction: column;
+  flex: auto;
+}
+
+.google-button {
+  width: 50%;
+  align-self: center;
+  left: 25%;
+}
+.user-header-after-login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: xx-large;
+}
+
+.logged-in {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100vh;
+  width: 100vw;
 }
 
 .content-row {
   flex: 1;
   background-color: #5459ac;
   display: flex;
+  flex-direction: row;
 }
 
-.user-header{
-  top: 0%;
-  font-size: large;
-  justify-content: center;
- flex-direction: column;
+.main-area {
+  flex: 1;
+  display: flex;
+  background-color: #829461;
+  flex-shrink: 0;
+  position: relative;
+  flex-direction: column;
+}
 
+.main-area-menu {
+  display: flex;
+  justify-content: space-evenly;
+  height: 25px;
+}
+
+.main-view {
+  flex: 1;
+  display: flex;
+  size: 100%;
+  background-color: #f0f0db;
+  flex-shrink: 0;
+  position: relative;
+  flex-direction: column;
 }
 
 .sidebar {
@@ -128,24 +177,6 @@
 
 .swiper-slide:nth-child(5) {
   background-color: #e1d9bc;
-}
-
-.main-area {
-  flex: 1;
-  display: flex;
-  background-color: #829461;
-  flex-shrink: 0;
-  position: relative;
-  flex-direction: column;
-}
-
-.main-view {
-  flex: 1;
-  display: flex;
-  size: 100%;
-  flex-shrink: 0;
-  position: relative;
-  flex-direction: column;
 }
 
 .homePage {

@@ -41,15 +41,20 @@ export default function LogIn({ onLoginSuccess }) {
       console.error('Login error:', err);
     }
   };
-
   return (
-    <div className="login-container">
-      <h2>Welcome! Log in to FavBytes</h2>
-      <GoogleLogin
-        onSuccess={handleSuccess}
-        onError={() => console.log('Login Failed')}
-      />
-      <div><img className='Logo' src={logo}/>
+    <div id="login-container" className="login-container">
+      <div>
+        <img className="Logo" src={logo} />
+      </div>
+      <div id="user-header-before-login" className="user-header-before-login">
+        <h2>Welcome! Please Log-in to FavBytes</h2>
+      </div>
+
+      <div id='google-button' className='google-button'>
+        <GoogleLogin
+          onSuccess={handleSuccess}
+          onError={() => console.log('Login Failed')}
+        />
       </div>
     </div>
   );
