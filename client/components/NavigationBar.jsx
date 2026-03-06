@@ -10,32 +10,28 @@ export default function NavBar({
       <div id="navigation-bar" className="navigation-bar">
         <nav>
           {/* HomePage button */}
-          <button
+          <button className='button-style'
             onClick={() => {
               setView('HomePage');
             }}
           >
-            {'Go to Home'}
+            {'Go Home 🏠'}
           </button>
           {/* ImageUpload Button */}
-          <button
+          <button className='button-style'
             onClick={() => {
               setView('ImageUpload');
             }}
           >
-            {'Go to Upload'}
+            {'Go to Upload 📤'}
           </button>
           {/* ImagePage button */}
-          <button
+          <button className='button-style'
             onClick={() => {
               setView('ImagePage');
             }}
           >
-            {'Go to Image'}
-          </button>
-          {/* Gallery show/hide button */}
-          <button onClick={onToggleGallery}>
-            {isShowingGallery ? 'Hide Gallery' : 'Show Gallery'}
+            {'Go to Image 🖼️'}
           </button>
           {/* Page view */}
         </nav>

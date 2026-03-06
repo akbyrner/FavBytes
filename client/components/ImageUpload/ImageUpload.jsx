@@ -1,7 +1,7 @@
-import { React, useState, useEffect } from 'react';
+import { React, useState, } from 'react';
 import ImageUploadStars from './ImageUploadStars';
 import ImageUploadTags from './ImageUploadTags';
-import axios from 'axios';
+
 
 export default function ImageUpload({ isActive = true, setIsActive }) {
   const [image, setImage] = useState(null);
@@ -10,7 +10,7 @@ export default function ImageUpload({ isActive = true, setIsActive }) {
   const [description, setDescription] = useState('');
   const [location, setLocation] = useState('');
   const [tags, setTags] = useState([]);
-  const [stars, setStars] = useState(0);
+  const [stars, setStars] = useState(1);
   const [formArr, setFormArr] = useState([]);
 
   console.log(
@@ -64,7 +64,7 @@ export default function ImageUpload({ isActive = true, setIsActive }) {
   return (
     <form id="image-upload" className="image-upload" onSubmit={handleSubmit}>
       <div id="image-upload-show-here" className="image-upload-show-here">
-        <button type="submit">Submit Image!</button>
+        <button className='button-style' type="submit">Submit Image!</button>
         <input
           type="file"
           accept="image/*"
@@ -88,6 +88,7 @@ export default function ImageUpload({ isActive = true, setIsActive }) {
           <input
             type="text"
             value={title}
+            style={{width: "100%"}}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="Image Title Goes Here!"
             required
@@ -99,6 +100,7 @@ export default function ImageUpload({ isActive = true, setIsActive }) {
         <label>
           <input
             value={description}
+                        style={{width: "100%"}}
             onChange={(e) => setDescription(e.target.value)}
             placeholder="Image Description Goes Here!"
             required
@@ -111,6 +113,7 @@ export default function ImageUpload({ isActive = true, setIsActive }) {
           <input
             type="text"
             value={location}
+                        style={{width: "100%"}}
             onChange={(e) => setLocation(e.target.value)}
             placeholder="Image Location Goes Here!"
           />

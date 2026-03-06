@@ -88,7 +88,7 @@ export default function App() {
                 />
               </div>
               <div id="logout-container" className="logout-container">
-                <button onClick={handleLogout}>Log out</button>
+                <button className='button-style' onClick={handleLogout}>Log out</button>
               </div>
             </div>
 
@@ -105,20 +105,23 @@ export default function App() {
 
                 <div id="main-area" className="main-area">
                   <div id="main-area-menu" className="main-area-menu">
-                    <button onClick={handleToggleSidebar}>
-                      Toggle Sidebar Here
+                    <button className='button-style' onClick={handleToggleSidebar}>
+                      {isShowingSidebar ? '← Hide Menu' : ' ☰ See Menu'}
                     </button>
-                    <button onClick={handleToggleGallery}>
-                      {isShowingGallery ? 'Hide Gallery' : 'Show Gallery'}
-                    </button><div>{formArr}</div>
                   </div>
-
                   <div id="main-view" className="main-view">
                     <MainView
                       view={view}
                       isActive={isActive}
                       setIsActive={setIsActive}
-                    /> 
+                    />
+                  </div>
+                  <div id="gallery-menu" className="gallery-menu">
+                    <button className='button-style' onClick={handleToggleGallery}>
+                      {isShowingGallery
+                        ? '⋆.🗄˚ Hide Gallery ↓'
+                        : '⋆.📷˚ Show Gallery ↑'}
+                    </button>
                   </div>
                 </div>
               </>
