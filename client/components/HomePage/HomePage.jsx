@@ -1,7 +1,5 @@
 import {React, useState} from 'react';
 import Map from './Map';
-import ByteList from './ByteList';
-
 
 export default function HomePage({ isActive = true, setIsActive, user }) {
   console.log(user)

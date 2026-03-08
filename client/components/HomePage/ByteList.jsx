@@ -1,7 +1,5 @@
-import dummyDishes from '../../../database/dummydata';
-
-export default function ByteList({ user }) {
-  const dishes = dummyDishes.map((dish) => {
+export default function ByteList({ user, dishes = [] }) {
+  const renderedDishes = dishes.map((dish) => {
     console.log(dish);
     return (
       <li key={dish.id}>
@@ -23,7 +21,7 @@ export default function ByteList({ user }) {
   });
   return (
     <div id="byteList" className="byteList">
-      <ul>{dishes}</ul>
+      <ul>{renderedDishes}</ul>
     </div>
   );
 }

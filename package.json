@@ -36,8 +36,7 @@
   "scripts": {
     "start": "node server/index.js",
     "build": "webpack --mode production",
-    "dev": "concurrently \"nodemon server/index.js\" \"webpack serve --mode development\"",
-    "seed": "node database/seed.js"
+    "dev": "concurrently \"nodemon server/index.js\" \"webpack serve --mode development\""
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
