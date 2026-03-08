@@ -126,7 +126,6 @@ export default function App() {
                       user={user}
                       isActive={isActive}
                       setIsActive={setIsActive}
-                      user={user}
                     />
                   </div>
                   <div id="gallery-menu" className="gallery-menu">
