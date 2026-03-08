@@ -141,3 +141,6 @@ vite.config.ts.timestamp-*
 
 #webpack
 webpack.config.cjs
+
+# Prod server sync script
+sync-deploy.sh

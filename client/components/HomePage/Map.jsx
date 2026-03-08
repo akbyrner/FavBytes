@@ -26,6 +26,7 @@ export default function AppMap({ user }) {
         initialViewState={initialViewState}
         mapStyle="mapbox://styles/mapbox/streets-v12"
         mapboxAccessToken={MAPBOX_TOKEN}
+        style={{ width: '100%', height: '100%' }}
       >
         {dishes.map(dish => (
           dish.location && dish.location.coordinates ? (

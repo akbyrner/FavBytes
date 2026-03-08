@@ -8,22 +8,26 @@ export default function ImagePage({ isActive = true, setIsActive }) {
   return (
     <div id="current-image" className="current-image">
       <div id="current-image-show-here" className="current-image-show-here">
-        <h2> current image show here</h2>
-
-        <div id="cur-img" className="cur-img"></div>
-      </div>
-      <div id="current-image-title" className="current-image-title">
-        <h3> current image title here </h3>
-      </div>
-      <div id="current-image-description" className="current-image-description">
-        <h3> current image description here </h3>
-      </div>
-      <div id="current-image-location" className="current-image-location">
-        <h3> current image location here</h3>
+        <h2>Current Image</h2>
+        <div id="cur-img" className="cur-img">
+          <span style={{ color: "white" }}>Image Placeholder</span>
+        </div>
       </div>
 
-      <div id="current-image-tags" className="current-image-tags">
-        <ImageTags />
+      <div className="current-image-right-column">
+        <div id="current-image-title" className="current-image-title">
+          <h3>Current Image Title</h3>
+        </div>
+        <div id="current-image-description" className="current-image-description">
+          <p>Current image description goes here.</p>
+        </div>
+        <div id="current-image-location" className="current-image-location">
+          <p>Current image location goes here.</p>
+        </div>
+
+        <div id="current-image-tags" className="current-image-tags">
+          <ImageTags />
+        </div>
       </div>
     </div>
   );

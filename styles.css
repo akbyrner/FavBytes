@@ -131,10 +131,10 @@
 
 .navigation-bar {
   display: flex;
-  width: fit-content;
-  justify-content: space-around;
-  min-width: 15%;
+  width: 100%;
+  padding: 20px;
   flex-direction: column;
+  gap: 20px;
 }
 .navigation-bar nav {
   display: flex;
@@ -143,6 +143,11 @@
   height: 100%;
   justify-content: space-evenly;
   flex-direction: column;
+  gap: 15px;
+}
+
+.navigation-bar .button-style {
+  width: 100%;
 }
 
 .main-area {
@@ -166,8 +171,11 @@
 .main-view {
   flex: 1;
   display: flex;
-  size: 100%;
-  background-color: #f0f0db;
+  background-color: #5459ac;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .sidebar {
@@ -176,16 +184,17 @@
   height: 100%;
   background-color: #acbac4;
   display: flex;
+  flex-direction: column;
   font-size: 25px;
+  border-right: 2px solid #5459ac;
 }
 
 .homePage {
-  background-color: #abb95b;
   flex: 1;
   display: flex;
   position: relative;
   width: 100%;
-  padding: 25px;
+  height: 100%;
 }
 .byteList-container {
   flex: 1;
@@ -221,82 +230,106 @@
 .map {
   flex: 1;
   border-radius: 12px;
-  max-width: 70%;
-  max-height: 95%;
-  background-color: #abb95b;
+  width: 100%;
+  height: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .image-upload {
-  background-color: #5459ac;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 25px;
-  padding: 25px;
   height: 100%;
   width: 100%;
+  overflow-y: auto;
 }
 
 .image-upload-show-here {
   display: flex;
   flex-direction: column;
   border-radius: 12px;
-  height: 95%;
+  height: auto;
   background-color: #b8bce7;
   padding: 25px;
-  width: 100;
+  width: 100%;
+  gap: 15px;
 }
 
 .upload-img {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
   border-radius: 12px;
-  max-height: 95%;
   background-color: #0c133c;
-  padding: 30%;
-  width: 100;
+  padding: 10px;
+  width: 100%;
+  min-height: 200px;
 }
 .image-upload-title {
   width: 100%;
   border-radius: 12px;
   height: auto;
-  padding: 25px;
+  padding: 15px;
   background-color: #a0a5d2;
 }
 
 .image-upload-description {
-  size: 95%;
+  width: 100%;
   border-radius: 12px;
   height: auto;
-  padding: 25px;
+  padding: 15px;
   background-color: #a0a5d2;
 }
 
 .image-upload-location {
-  size: 95%;
+  width: 100%;
   border-radius: 12px;
   height: auto;
-  padding: 25px;
+  padding: 15px;
   background-color: #a0a5d2;
+}
+
+.image-upload-restaurant {
+  width: 100%;
+  border-radius: 12px;
+  height: auto;
+  padding: 15px;
+  background-color: #a0a5d2;
+}
+
+.image-upload-price {
+  width: 100%;
+  border-radius: 12px;
+  height: auto;
+  padding: 15px;
+  background-color: #a0a5d2;
+}
+
+.image-upload-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #b8bce7;
+  padding: 25px;
+  border-radius: 12px;
 }
 
 .image-upload-tags {
   display: flex;
   background-color: #f1e3d3;
-  flex-direction: row;
-  height: 30%;
-  flex: 1;
-  justify-content: space-between;
+  padding: 15px;
   border-radius: 12px;
-  position: relative;
-}
-.image-upload-tag-container {
-  display: flex;
-  flex-direction: row;
-  padding: 25px;
   width: 100%;
-  position: relative;
+}
+
+.image-upload-stars {
+  display: flex;
+  background-color: #f1e3d3;
+  padding: 15px;
+  border-radius: 12px;
+  width: 100%;
 }
 
 .image-upload-tag-box {
@@ -312,89 +345,84 @@
 .image-upload-tag-list {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 25px;
-  size: 100%;
-  height: 100%;
-  border-radius: 12px;
-  font-size: xx-large;
+  width: 100%;
 }
 
 .image-upload-stars-box {
   display: flex;
-  width: 30%;
-  justify-self: right;
   flex-direction: column;
-  justify-content: center;
-  font-size: xx-large;
+  width: 100%;
+  font-size: large;
 }
 
 .image-upload-stars-choice {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 5px;
   width: 100%;
-  height: auto;
-  border-radius: 12px;
-  font-size: 85px;
+  margin-top: 10px;
 }
 
 .current-image {
-  background-color: #5459ac;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 25px;
-  padding: 25px;
   height: 100%;
   width: 100%;
+  overflow-y: auto;
 }
 .current-image-box1 {
+  display: flex;
   flex-direction: column;
-  flex: 3 0 0;
+  gap: 15px;
 }
 .current-image-show-here {
   display: flex;
   flex-direction: column;
   border-radius: 12px;
-  height: 95%;
+  height: auto;
   background-color: #b8bce7;
   padding: 25px;
-  width: 100;
+  width: 100%;
 }
 .cur-img {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
   border-radius: 12px;
-  max-height: 95%;
   background-color: #0c133c;
-  padding: 30%;
-  width: 100;
+  padding: 10px;
+  width: 100%;
+  min-height: 200px;
 }
 .current-image-title {
-  size: 95%;
+  width: 100%;
   border-radius: 12px;
   height: auto;
-  padding: 25px;
+  padding: 15px;
   background-color: #a0a5d2;
 }
-.current-image-box2 {
-  flex: 1 0 0;
+.current-image-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #b8bce7;
+  padding: 25px;
+  border-radius: 12px;
 }
 .current-image-description {
-  size: 95%;
+  width: 100%;
   border-radius: 12px;
   height: auto;
-  padding: 25px;
+  padding: 15px;
   background-color: #a0a5d2;
 }
 
 .current-image-location {
-  size: 95%;
+  width: 100%;
   border-radius: 12px;
   height: auto;
-  padding: 25px;
+  padding: 15px;
   background-color: #a0a5d2;
 }
 

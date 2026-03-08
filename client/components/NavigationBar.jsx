@@ -40,7 +40,9 @@ export default function NavBar({
           </button>
           {/* Page view */}
         </nav>
-        {view}
+        <div style={{ marginTop: '20px', padding: '10px', fontSize: '18px', fontWeight: 'bold' }}>
+          {view}
+        </div>
       </div>
     </div>
   );
