@@ -148,6 +148,8 @@ app.post('/api/favDish', upload.single('image'), async (req, res) => {
       rating,
       price,
       location,
+      lat,
+      lng,
       tags,
     } = req.body;
 
@@ -159,10 +161,13 @@ app.post('/api/favDish', upload.single('image'), async (req, res) => {
       description,
       rating: Number(rating),
       price: Number(price),
-      location: { address: location },
+      location: { 
+        address: location,
+        coordinates: { lat: Number(lat), lng: Number(lng) } 
+      },
       tags: JSON.parse(tags),
     });
-
+    
     res.status(200).json(newDish);
   } catch (error) {
     console.error('Error saving dish:', error);
