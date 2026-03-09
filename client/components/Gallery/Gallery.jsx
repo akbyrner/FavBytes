@@ -1,13 +1,12 @@
-import React from 'react';
-import GalleryItem from './GalleryItem';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import GalleryItem from './GalleryItem';
 
-export default function Gallery({ dishes = [] }) {
+export default function Gallery({ dishes = [], setSelectedDish, setView }) {
   return (
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -23,6 +22,10 @@ export default function Gallery({ dishes = [] }) {
             title={dish.name}
             thumbnail={dish.imageUrl}
             item={dish}
+            onClick={() => {
+              setSelectedDish(dish);
+              setView('ImagePage');
+            }}
           />
         </SwiperSlide>
       ))}

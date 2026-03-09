@@ -55,7 +55,7 @@ export default function ImageUpload({
     formData.append('name', title);
     formData.append('restaurantName', restaurantName);
     formData.append('description', description);
-    formData.append('rating', stars);
+    formData.append('rating', stars?.value ?? 1);
     formData.append('price', price);
     formData.append('location', location);
 
@@ -63,7 +63,7 @@ export default function ImageUpload({
       formData.append('lng', locationCoords.lng);
       formData.append('lat', locationCoords.lat);
     }
-    formData.append('tags', JSON.stringify(tags));
+    formData.append('tags', JSON.stringify(tags.map((t) => t.value)));
 
     try {
       const res = await fetch('/api/favDish', {

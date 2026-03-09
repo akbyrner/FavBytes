@@ -1,7 +1,11 @@
-export default function GalleryItem({ title, thumbnail, item }) {
+export default function GalleryItem({ title, thumbnail, item, onClick }) {
   return (
-    <div id="gallery-item" className="gallery-item">
-      <div id="gallery-thumbnail" className="gallery-thumbnail">
+    <div
+      className="gallery-item"
+      onClick={onClick}
+      style={{ cursor: 'pointer' }}
+    >
+      <div className="gallery-thumbnail">
         {thumbnail ? (
           <img
             src={thumbnail}
@@ -12,7 +16,7 @@ export default function GalleryItem({ title, thumbnail, item }) {
           <div style={{ width: '100%', height: '150px', background: '#333', borderRadius: '8px' }} />
         )}
       </div>
-      <div id="gallery-item-title" className="gallery-item-title">
+      <div className="gallery-item-title">
         <h3 style={{ margin: '8px 0 4px' }}>{title}</h3>
         <p style={{ margin: 0, fontSize: '0.85em', opacity: 0.7 }}>{item?.restaurantName}</p>
         {item?.location?.address && (

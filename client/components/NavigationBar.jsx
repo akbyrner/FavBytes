@@ -28,21 +28,7 @@ export default function NavBar({
             {'Go to Upload'}
             <br /> {' 📤'}
           </button>
-          {/* ImagePage button */}
-          <button
-            className="nav-button-style"
-            onClick={() => {
-              setView('ImagePage');
-            }}
-          >
-            {'Go to Image'}
-            <br /> {' 🖼️'}
-          </button>
-          {/* Page view */}
         </nav>
-        <div style={{ marginTop: '20px', padding: '10px', fontSize: '18px', fontWeight: 'bold' }}>
-          {view}
-        </div>
       </div>
     </div>
   );

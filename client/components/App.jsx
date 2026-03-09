@@ -18,6 +18,8 @@ function MainView({
   setSelectedLocation,
   selectedLocation,
   fetchDishes,
+  selectedDish,
+  setSelectedDish,
 }) {
   return view === 'ImageUpload' ? (
     <ImageUpload
@@ -29,7 +31,12 @@ function MainView({
       fetchDishes={fetchDishes}
     />
   ) : view === 'ImagePage' ? (
-    <ImagePage isActive={isActive} setIsActive={setIsActive} />
+    <ImagePage
+      isActive={isActive}
+      setIsActive={setIsActive}
+      dish={selectedDish}
+      setView={setView}
+    />
   ) : (
     <HomePage
       isActive={isActive}
@@ -38,6 +45,7 @@ function MainView({
       dishes={dishes}
       setView={setView}
       setSelectedLocation={setSelectedLocation}
+      setSelectedDish={setSelectedDish}
     />
   );
 }
@@ -117,7 +125,10 @@ export default function App() {
       ) : (
         <>
           <div id="logged-in" className="logged-in">
-            <div id="user-header-after-login" className="user-header-after-login">
+            <div
+              id="user-header-after-login"
+              className="user-header-after-login"
+            >
               <div id="profile-container" className="profile-container">
                 {user.picture && (
                   <img
@@ -130,7 +141,11 @@ export default function App() {
                 {user.name} 😋
               </div>
               <div id="favBytes-container" className="favBytes-container">
-                <img className="Logo" src={logo} style={{ maxWidth: '250px' }} />
+                <img
+                  className="Logo"
+                  src={logo}
+                  style={{ maxWidth: '250px' }}
+                />
               </div>
               <div id="logout-container" className="logout-container">
                 <button className="button-style" onClick={handleLogout}>
@@ -151,7 +166,10 @@ export default function App() {
                 )}
                 <div id="main-area" className="main-area">
                   <div id="main-area-menu" className="main-area-menu">
-                    <button className="button-style" onClick={handleToggleSidebar}>
+                    <button
+                      className="button-style"
+                      onClick={handleToggleSidebar}
+                    >
                       {isShowingSidebar ? '← Hide Menu' : '☰ See Menu'}
                     </button>
                   </div>
@@ -166,11 +184,18 @@ export default function App() {
                       fetchDishes={fetchDishes}
                       setSelectedLocation={setSelectedLocation}
                       selectedLocation={selectedLocation}
+                      selectedDish={selectedDish}
+                      setSelectedDish={setSelectedDish}
                     />
                   </div>
                   <div id="gallery-menu" className="gallery-menu">
-                    <button className="button-style" onClick={handleToggleGallery}>
-                      {isShowingGallery ? '⋆.🗄˚ Hide Gallery ↓' : '⋆.📷˚ Show Gallery ↑'}
+                    <button
+                      className="button-style"
+                      onClick={handleToggleGallery}
+                    >
+                      {isShowingGallery
+                        ? '⋆.🗄˚ Hide Gallery ↓'
+                        : '⋆.📷˚ Show Gallery ↑'}
                     </button>
                   </div>
                 </div>
@@ -183,6 +208,8 @@ export default function App() {
                   dishes={dishes}
                   searchArr={searchArr}
                   setSearchArr={setSearchArr}
+                  setSelectedDish={setSelectedDish}
+                  setView={setView}
                 />
               </div>
             )}

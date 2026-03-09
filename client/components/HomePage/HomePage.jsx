@@ -6,12 +6,13 @@ export default function HomePage({
   dishes,
   setView,
   setSelectedLocation,
+  setSelectedDish,
 }) {
   return (
     <div id="homePage" className="homePage">
       <div id="byteList-container" className="byteList-container">
         <div id="byteList" className="byteList">
-          <ByteList dishes={dishes} user={user} />
+          <ByteList setView={setView} dishes={dishes} user={user} setSelectedDish={setSelectedDish} />
         </div>
       </div>
       <div id="map" className="map">

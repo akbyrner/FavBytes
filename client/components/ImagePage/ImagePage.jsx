@@ -1,32 +1,60 @@
-import { React, useState } from 'react';
+import React from 'react';
 import ImageTags from './ImageTags';
 
+export default function ImagePage({ dish, setView }) {
+  if (!dish) return (
+    <div style={{ color: 'white' }}>
+      No dish selected.
+      <button className="button-style" onClick={() => setView('HomePage')}>
+        ← Back
+      </button>
+    </div>
+  );
 
-export default function ImagePage({ isActive = true, setIsActive }) {
-  const [searchArr, setSearchArr] = useState(['img1', 'img2', 'img3', 'img4']);
-  //console.log(!isActive ? 'ImagePage is active' : 'ImagePage isnot active');
   return (
     <div id="current-image" className="current-image">
       <div id="current-image-show-here" className="current-image-show-here">
-        <h2>Current Image</h2>
+        <button
+          className="button-style"
+          onClick={() => setView('HomePage')}
+          style={{ marginBottom: '12px' }}
+        >
+          ← Back
+        </button>
         <div id="cur-img" className="cur-img">
-          <span style={{ color: "white" }}>Image Placeholder</span>
+          {dish.imageUrl ? (
+            <img
+              src={dish.imageUrl}
+              alt={dish.name}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px' }}
+            />
+          ) : (
+            <span style={{ color: 'white' }}>No Image</span>
+          )}
         </div>
       </div>
 
       <div className="current-image-right-column">
         <div id="current-image-title" className="current-image-title">
-          <h3>Current Image Title</h3>
+          <h3>{dish.name}</h3>
         </div>
         <div id="current-image-description" className="current-image-description">
-          <p>Current image description goes here.</p>
+          <p>{dish.description}</p>
+        </div>
+        <div id="current-image-restaurant" className="current-image-restaurant">
+          <p>🍽️ {dish.restaurantName}</p>
         </div>
         <div id="current-image-location" className="current-image-location">
-          <p>Current image location goes here.</p>
+          {dish.location?.address && <p>📍 {dish.location.address}</p>}
         </div>
-
+        <div id="current-image-price" className="current-image-price">
+          {dish.price && <p>💲 ${dish.price}</p>}
+        </div>
+        <div id="current-image-rating" className="current-image-rating">
+          {dish.rating && <p>⭐ {dish.rating} / 3</p>}
+        </div>
         <div id="current-image-tags" className="current-image-tags">
-          <ImageTags />
+          <ImageTags tags={dish.tags} />
         </div>
       </div>
     </div>

@@ -1,4 +1,8 @@
-export default function ByteList({ dishes = [] }) {
+export default function ByteList({
+  dishes = [],
+  setSelectedDish,
+  setView,
+}) {
   if (!dishes.length) {
     return (
       <div id="byteList" className="byteList">
@@ -13,10 +17,15 @@ export default function ByteList({ dishes = [] }) {
         <div
           key={dish._id}
           className="byte-card"
+          onClick={() => {
+            setSelectedDish(dish);
+            setView('ImagePage');
+          }}
           style={{
             marginBottom: '12px',
             borderRadius: '8px',
             overflow: 'hidden',
+            cursor: 'pointer',
           }}
         >
           <div
@@ -48,42 +57,3 @@ export default function ByteList({ dishes = [] }) {
     </div>
   );
 }
-// import { useState, useEffect } from 'react';
-
-// export default function ByteList({ user }) {
-//   const [dishes, setDishes] = useState([]);
-//   const [selectedDish, setSelectedDish] = useState(null);
-//   console.log(user);
-//   useEffect(() => {
-//     fetch('/api/dishes')
-//       .then((res) => res.json())
-//       .then((data) => setDishes(data))
-//       .catch((err) => console.error(err));
-//   }, []);
-
-//   const renderedDishes = dishes.map((dish) => {
-//     console.log(dish);
-//     return (
-//       <li key={dish.id}>
-//         <div id="dish" className="dish">
-//           <div id="dish-name" className="dish-name">
-//             {dish.name} from: {dish.restaurantName}
-//           </div>
-//           <br />
-//           <div id="dish-description" className="dish-description">
-//             {dish.description}rating:{dish.stars}
-//           </div>
-//           <br />
-//           <div id="dish-image" className="dish-image">
-//             <img src={dish.imageUrl} alt={dish.name} />
-//           </div>
-//         </div>
-//       </li>
-//     );
-//   });
-//   return (
-//     <div id="byteList" className="byteList">
-//       <ul>{renderedDishes}</ul>
-//     </div>
-//   );
-// }

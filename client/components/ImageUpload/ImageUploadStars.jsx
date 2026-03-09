@@ -1,29 +1,29 @@
-import { React, useState } from 'react';
+import React from 'react';
 import Select from 'react-select';
 
-export default function ImageUploadStars() {
-  const [stars, setStars] = useState(1);
-  const options = [
-    { value: 1, label: '🌟 ', text: 'one star! really good!' },
-    { value: 2, label: '🤩 ', text: 'two stars! outstanding!' },
-    { value: 3, label: '✨ ', text: 'three stars! incredible!!!' },
-  ];
-  const customStyles = {
-    control: (provided) => ({
-      ...provided,
-      backgroundColor: '#f1e3d3y',
-      padding: '5px 10px',
-      fontsize: '120px',
-      border: '0px',
-    }),
-    option: (provided, state) => ({
-      ...provided,
+const options = [
+  { value: 1, label: '🌟', text: 'one star! really good!' },
+  { value: 2, label: '🤩', text: 'two stars! super great!' },
+  { value: 3, label: '✨', text: 'three stars! incredible!!!' },
+];
 
-      borderBottom: '1px dotted pink',
-      color: state.isSelected ? 'white' : 'black',
-      backgroundColor: state.isSelected ? 'hotpink' : 'white',
-    }),
-  };
+const customStyles = {
+  control: (provided) => ({
+    ...provided,
+    backgroundColor: '#f1e3d3',
+    padding: '5px 10px',
+    fontSize: '120px',
+    border: '0px',
+  }),
+  option: (provided, state) => ({
+    ...provided,
+    borderBottom: '1px dotted pink',
+    color: state.isSelected ? 'white' : 'black',
+    backgroundColor: state.isSelected ? 'hotpink' : 'white',
+  }),
+};
+
+export default function ImageUploadStars({ stars, setStars }) {
   return (
     <div id="image-upload-stars-box" className="image-upload-stars-box">
       <h1>Rate your Overall Experience:</h1>
@@ -38,7 +38,7 @@ export default function ImageUploadStars() {
           />
         </label>
       </div>
-      {stars.text}
+      {stars?.text}
     </div>
   );
 }
