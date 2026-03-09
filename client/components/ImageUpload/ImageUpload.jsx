@@ -119,8 +119,7 @@ export default function ImageUpload({
           Submit Image!
         </button>
       </div>
-
-      <div className="image-upload-right-column">
+      <div id="image-upload-items" className={'image-upload-items'}>
         <div id="image-upload-title" className="image-upload-title">
           <label>
             <input
@@ -164,7 +163,7 @@ export default function ImageUpload({
             <input
               type="text"
               value={location}
-              style={{ width: '50%' }}
+              style={{ width: '100%' }}
               onChange={(e) => setLocation(e.target.value)}
               placeholder="Image Location Goes Here!"
             />
@@ -203,12 +202,15 @@ export default function ImageUpload({
             <input
               type="number"
               value={price}
-              style={{ width: '50%' }}
+              style={{ width: '100%' }}
               onChange={(e) => setPrice(e.target.value)}
               placeholder="Price Goes Here!"
             />
           </label>
         </div>
+      </div>
+
+      <div id="tags-and-stars" className="tags-and-stars">
         <div id="image-upload-tags" className="image-upload-tags">
           <ImageUploadTags tags={tags} setTags={setTags} />
         </div>

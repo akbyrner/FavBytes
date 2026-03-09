@@ -28,6 +28,7 @@ export default function NavBar({
             {'Go to Upload'}
             <br /> {' 📤'}
           </button>
+
         </nav>
       </div>
     </div>

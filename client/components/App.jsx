@@ -5,7 +5,9 @@ import LogIn from './LogIn';
 import ImagePage from './ImagePage/ImagePage';
 import NavBar from './NavigationBar';
 import ImageUpload from './ImageUpload/ImageUpload';
-import logo from '../../public/images/FavBytes.png';
+import pinklogo from '../../public/images/FavBytes.png';
+import greenlogo from '../../public/images/FinalFavBytes.png';
+
 import { googleLogout } from '@react-oauth/google';
 
 function MainView({
@@ -137,18 +139,21 @@ export default function App() {
                     style={{ width: 50, height: 50, borderRadius: '50%' }}
                   />
                 )}
-                <h1>Welcome,</h1>
                 {user.name} 😋
+                <div id="menu" className="menu">
+                  <button
+                    className="plain-button-style"
+                    onClick={handleToggleSidebar}
+                  >
+                    {isShowingSidebar ? '← Hide Menu' : '☰ See Menu'}
+                  </button>
+                </div>
               </div>
               <div id="favBytes-container" className="favBytes-container">
-                <img
-                  className="Logo"
-                  src={logo}
-                  style={{ maxWidth: '250px' }}
-                />
+                <img className="Logo" src={greenlogo} />
               </div>
               <div id="logout-container" className="logout-container">
-                <button className="button-style" onClick={handleLogout}>
+                <button className="plain-button-style" onClick={handleLogout}>
                   Log out
                 </button>
               </div>
@@ -165,14 +170,6 @@ export default function App() {
                   />
                 )}
                 <div id="main-area" className="main-area">
-                  <div id="main-area-menu" className="main-area-menu">
-                    <button
-                      className="button-style"
-                      onClick={handleToggleSidebar}
-                    >
-                      {isShowingSidebar ? '← Hide Menu' : '☰ See Menu'}
-                    </button>
-                  </div>
                   <div id="main-view" className="main-view">
                     <MainView
                       view={view}
@@ -190,13 +187,12 @@ export default function App() {
                   </div>
                   <div id="gallery-menu" className="gallery-menu">
                     <button
-                      className="button-style"
+                      className="plain-button-style"
                       onClick={handleToggleGallery}
                     >
-                      {isShowingGallery
-                        ? '⋆.🗄˚ Hide Gallery ↓'
-                        : '⋆.📷˚ Show Gallery ↑'}
+                      {isShowingGallery ? ' Hide Gallery ↓' : ' Show Gallery ↑'}
                     </button>
+
                   </div>
                 </div>
               </>

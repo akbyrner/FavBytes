@@ -18,12 +18,13 @@ const customStyles = {
   control: (provided) => ({
     ...provided,
     backgroundColor: '#f1e3d3',
-    height: '95%',
     border: '0px',
+    width: '100%',
     padding: '5px 10px',
   }),
   option: (provided, state) => ({
     ...provided,
+    width: '100%',
     borderBottom: '1px dotted pink',
     color: state.isSelected ? 'white' : 'black',
     backgroundColor: state.isSelected ? 'hotpink' : 'white',
@@ -33,9 +34,9 @@ const customStyles = {
 export default function ImageUploadTags({ tags, setTags }) {
   return (
     <div id="image-upload-tag-box" className="image-upload-tag-box">
+      <h1>Select Photo Tags:</h1>
       <div id="image-upload-tag-list" className="image-upload-tag-list">
         <label>
-          <h1>Select Photo Tags:</h1>
           <Select
             options={options}
             styles={customStyles}

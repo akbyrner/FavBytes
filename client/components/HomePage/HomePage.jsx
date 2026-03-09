@@ -1,5 +1,6 @@
 import Map from './Map';
 import ByteList from './ByteList';
+import saveYourFaves from '../../../public/images/saveyourfavs.png';
 
 export default function HomePage({
   user,
@@ -12,10 +13,15 @@ export default function HomePage({
     <div id="homePage" className="homePage">
       <div id="byteList-container" className="byteList-container">
         <div id="byteList" className="byteList">
-          <ByteList setView={setView} dishes={dishes} user={user} setSelectedDish={setSelectedDish} />
+          <ByteList
+            setView={setView}
+            dishes={dishes}
+            user={user}
+            setSelectedDish={setSelectedDish}
+          />
         </div>
       </div>
-      <div id="map" className="map">
+      <div id="map" className="map"style={{height: "100%"}}>
         <Map
           dishes={dishes}
           user={user}

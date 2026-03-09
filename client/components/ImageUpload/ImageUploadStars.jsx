@@ -11,18 +11,18 @@ const customStyles = {
   control: (provided) => ({
     ...provided,
     backgroundColor: '#f1e3d3',
-    padding: '5px 10px',
-    fontSize: '120px',
     border: '0px',
+    padding: '5px 10px',
+    width: '100%',
   }),
   option: (provided, state) => ({
     ...provided,
     borderBottom: '1px dotted pink',
+    width: '100%',
     color: state.isSelected ? 'white' : 'black',
     backgroundColor: state.isSelected ? 'hotpink' : 'white',
   }),
 };
-
 export default function ImageUploadStars({ stars, setStars }) {
   return (
     <div id="image-upload-stars-box" className="image-upload-stars-box">
@@ -38,7 +38,6 @@ export default function ImageUploadStars({ stars, setStars }) {
           />
         </label>
       </div>
-      {stars?.text}
     </div>
   );
 }
